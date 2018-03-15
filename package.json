@@ -5,17 +5,19 @@
   "main": "dist/index.js",
   "dependencies": {
     "lodash": "^4.17.5",
-    "sticky-events": "^1.2.0",
+    "sticky-events": "^1.2.1",
     "window-scroll-position": "^1.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12",
-    "webpack": "^3.11.0",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
     "babel-loader": "^7.1.2",
-    "uglifyjs-webpack-plugin": "^1.2.3"
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "css-loader": "^0.28.10",
+    "nodemon": "^1.14.12",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "webpack": "^3.11.0"
   },
   "scripts": {
     "build": "node_modules/.bin/webpack -p",

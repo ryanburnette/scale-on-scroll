@@ -1,5 +1,6 @@
 /* jshint node: true, asi: true */
-var path = require('path')
+const path = require('path')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './lib/index.js',
@@ -19,11 +20,24 @@ module.exports = {
         }
       },
       {
+        test: /\/lib\/index.js/,
+        use: {
+          loader: 'babel-loader'
+        }
+      },
+      {
         test: /sticky-events.js/,
         use: {
           loader: 'babel-loader'
         }
+      },
+      {
+        test: /\.css$/,
+        use: [ 'style-loader', 'css-loader' ]
       }
     ]
-  }
+  },
+  plugins: [
+    new UglifyJSPlugin(),
+  ]
 }
