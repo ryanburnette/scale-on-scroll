@@ -1,0 +1,27 @@
+{
+  "name": "scale-on-scroll",
+  "version": "1.0.0",
+  "description": "Smoothly scale an element as a function of window scroll position.",
+  "main": "dist/index.js",
+  "dependencies": {
+    "lodash": "^4.17.5",
+    "sticky-events": "^1.2.0",
+    "window-scroll-position": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12",
+    "webpack": "^3.11.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-loader": "^7.1.2",
+    "uglifyjs-webpack-plugin": "^1.2.3"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/webpack -p",
+    "prepare": "npm run build",
+    "watch": "node_modules/.bin/nodemon --watch lib/ --exec npm run build"
+  },
+  "author": "Ryan Burnette",
+  "license": "ISC"
+}

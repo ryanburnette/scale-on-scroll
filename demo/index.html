@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>#scale-on-scroll() demo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      min-height: 100rem;
+    }
+    h1 {
+      margin: 4rem auto;
+      font-family: 'Avenir', Arial, sans-serif;
+      font-size: 3rem;
+      text-align: center;
+    }
+    h1 span {
+      display: block;
+    }
+    .box {
+      position: sticky;
+      top: 1rem;
+      width: 20rem;
+      height: 20rem;
+      margin: 1rem auto;
+      background-color: red;
+      transform-origin: top center;
+    }
+    button.destroy {
+      position: fixed;
+      bottom: 1rem;
+      left: 1rem;
+    }
+    .github-button {
+      opacity: 0;
+    }
+  </style>
+  <script src="../dist/index.js"></script>
+  <script>
+
+    /* DEMO */
+    window.demoOptions = scaleOnScroll('.box',{
+      multiplier: 0.1
+    })
+    /* /DEMO */
+
+  </script>
+</head>
+
+<body>
+  <h1>
+    <span>#scaleOnScroll() demo</span>
+    <a class="github-button" href="https://github.com/ryanburnette/scale-on-scroll" data-size="large" data-show-count="true" aria-label="Star ryanburnette/scale-on-scroll on GitHub">Star</a>
+  </h1>
+  <div class="box"></div>
+  <button class="destroy" onclick="window.demoOptions.destroy();this.remove()">Destroy</button>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</body>
+
+</html>
